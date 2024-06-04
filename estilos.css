@@ -1,0 +1,116 @@
+       /* Estilo general del cuerpo de la página */
+       body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;  /* Centra el contenedor principal horizontalmente */
+    }
+    /* Contenedor principal con ancho fijo centrado */
+    #container {
+        width: 960px;
+        margin: 0 auto; /* Centra el contenedor principal */
+    }
+    /* Encabezado de la página */
+    header {
+        text-align: center;
+    }
+    /* Contenedor principal del contenido, dividido en dos columnas */
+    #main-content {
+        display: flex;
+    }
+    /* Barra lateral con ancho fijo */
+    .left-section {
+        width: 260px;
+        padding: 10px;
+    }
+    /* Contenido principal que ocupa el espacio restante */
+    #content {
+        flex: 1;
+        padding: 10px;
+    }
+    /* Estilo para la lista en tres columnas */
+    .three-columns {
+        column-count: 3;   /* Divide el contenido en tres columnas */
+        column-gap: 10px;  /* Espacio entre columnas */
+    }
+
+#container {
+    width: 960px;
+    margin: 0 auto; /* Centra el contenedor principal */
+}
+
+/* Encabezado de la página */
+header {
+    text-align: center;
+    color: white; /* Color blanco para el texto */
+    font-size: 24px; /* Tamaño del texto */
+    position: relative;
+    animation: rotateText 10s infinite linear;
+}
+
+@keyframes rotateText {
+    0% {
+        transform: perspective(500px) rotateY(0deg) rotateX(0deg); /* Rotación inicial */
+    }
+    100% {
+        transform: perspective(500px) rotateY(360deg) rotateX(360deg); /* Rotación final */
+    }
+}
+
+/* Fondo de la página con efectos universales */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url('Espacio.gif'); /* URL de tu imagen de fondo */
+    z-index: -1;
+    opacity: 0.99;
+    font-family: Arial, sans-serif; 
+
+    display: flex;
+    justify-content: center;  /* Centra el contenedor principal horizontalmente */
+   
+    animation: changeColor 5s infinite alternate; /
+     /* Opacidad del fondo */
+}
+p {
+    color: rgb(247, 247, 247);
+    font-size: 14px;
+}
+h2{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+ul, ol{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+/* Estilo del contenedor del texto */
+.text-container {
+    position: relative; /* Necesario para que el logo esté detrás del texto */
+}
+
+/* Estilo del logo */
+#logo {
+    position: fixed; /* Fija el logo en la ventana del navegador */
+    top: 50%; /* Lo posiciona verticalmente en el centro */
+    left: 50%; /* Lo posiciona horizontalmente en el centro */
+    transform: translate(-50%, -50%); /* Centra exactamente el logo */
+    z-index: -1; /* Establece un índice de apilamiento detrás del texto */
+    animation: moveUpDown 5s infinite alternate; /* Animación de movimiento */
+    opacity: 0.5; /* Ajusta la opacidad para que el texto sea más visible */
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translate(-50%, -50%) translateY(0); /* Posición inicial */
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(-20px); /* Posición final */
+    }
+}

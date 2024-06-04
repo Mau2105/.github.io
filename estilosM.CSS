@@ -1,0 +1,61 @@
+/* Estilos para el logo */
+.logo {
+    position: absolute;
+    top: 20px; /* Distancia desde arriba */
+    left: 10px; /* Distancia desde la izquierda */
+    width: 200px; /* Ancho del logo (ajusta según necesites) */
+    height: auto; /* Altura automática para mantener la proporción */
+    z-index: 999; /* Asegura que el logo esté por encima del contenido */
+    border: 2px solid transparent; /* Borde inicialmente transparente */
+    transition: border-color 0.3s; /* Transición de color del borde */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: changeBackgroundColor 40s infinite; /* Cambio automático de color de fondo */
+    border: 5px solid #08ee4d; /* Borde de la página */
+}
+
+.container {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(42, 9, 230, 0.1);
+}
+
+/* Estilos para el título */
+
+.title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff0000;
+    cursor: pointer; /* Cambiar el cursor a mano */
+    transition: color 0.3s ease; /* Transición de color */
+    animation: moveWorld 10s infinite linear alternate; /* Animación de movimiento 3D */
+}
+/* Cambio de color del título cuando se pasa el cursor */
+.title:hover {
+    color: #00ff00; /* Cambiar el color a verde fosforescente */
+}
+
+
+/* Animación de movimiento 3D */
+@keyframes moveWorld {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+/* Animación de cambio automático de color de fondo */
+@keyframes changeBackgroundColor {
+    0% { background-color: #f1caca; }
+    25% { background-color: #f8f8ff; }
+    50% { background-color: #c0daf1; }
+    75% { background-color: #f7f7c2; }
+    100% { background-color: #b7dbc3; }
+}
